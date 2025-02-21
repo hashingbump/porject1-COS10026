@@ -1,0 +1,2014 @@
+/* ==== General Styles ==== */
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ECEEF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+/* ============================ */
+/* ==== Header ==== */
+.navbar {
+    margin: 0;
+    position: fixed;  
+    top: 0;          
+    left: 0;
+    width: 100%;     
+    background-color: #000000;
+    padding: 16px 0;
+    z-index: 1000;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(128, 128, 128, 0.3);
+}
+
+/* Logo container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image */
+.logo {
+    border-radius: 8%;
+    height: 40px; 
+    margin: 0px 80%;
+}
+
+/* Centering the navigation menu */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Individual menu items */
+.navbar ul li {
+    margin: 0 15px;
+}
+
+/* Menu links */
+.navbar ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 12px 13px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Background effect */
+.navbar ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000000, #FF0000);
+    transition: left 0.3s ease-in-out;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+    color: #FFFFFF;
+}
+
+/* Move background on hover */
+.navbar ul li a:hover::before {
+    left: 0;
+}
+
+.navbar ul li .current{
+    color:#FF0000;
+}
+
+
+/* ============================ */
+/* ==== Body of Home Page ==== */
+.home-page {
+    width: 100%;
+    background: linear-gradient(to bottom, #000000, #861C1C);
+    color: #ebe8e8; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#banner {
+    width: 100%;
+    margin: 82px 0 6.5% 0;
+    display: flex;
+}
+
+#banner .box-left {
+    padding-left: 3%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+#banner .box-left h2 {
+    font-size: 80px;
+    margin-top: 100px;
+    color: #FFFFFF;
+    text-align: left;
+
+}
+
+#banner .box-left p {
+    color: #FFFFFF;
+    font-size: 25px;
+    text-align: left;
+    margin: 0;
+}
+
+#banner .box-left a {
+    margin-top: 3%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 28%;
+    height: 42px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+    animation: zoomText 1.75s ease-in-out infinite;
+}
+
+#banner .box-left a:hover {
+    animation: waveBackground 2s ease-in-out infinite;
+    color:#ff0000;
+    box-shadow: 0 0 15px #FF0000;
+}
+
+#banner .box-right {
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .box-right img {
+    margin: 0px 10px;
+    animation: moveY 3s ease-in-out infinite;
+}
+
+@keyframes moveY{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/*----section class="taskbar"----*/
+.taskbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar section {
+    width: 95%;
+    background: linear-gradient(-45deg, #ffffff, #A9A9A9, #ffffff);
+    animation: waveBackground 2s ease-in-out infinite;
+    background-size: 300% 300%;
+    color: #0e0d0d;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding: 0;
+    position: relative; 
+    border-radius: 60px;
+}
+
+.taskbar div{
+    padding: 1% 0;
+}
+
+.taskbar .stat  h2{
+    margin: 0;
+}
+
+.taskbar .stat  p {
+    margin: 0;
+    color: #0f0f0f;
+}
+
+/*----nav class="list"----*/
+nav {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px;
+    color: #FFF;
+    margin-top: 50px;
+    
+}
+
+nav ul {
+    color: #f7f7f7;
+    font-size: 10px;
+}
+
+nav img {
+    max-width: 250px; 
+    height: auto;
+}
+
+nav div {
+    max-width: 60%; 
+    text-align: left;
+}
+
+nav h3 {
+    border-bottom: none;
+    font-size: 1.5rem;
+    margin: 0; 
+    color: #fdfbfb;
+}
+
+nav p {
+    width: 80%;
+    padding-top: 0.7%;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #faf8f8;
+    margin: 0;
+}
+
+
+/* ============================ */
+/* ==== Body of Jobs Page ==== */
+.title1{
+    border-bottom: 2.5px solid #FF0000;
+    display: inline-block;
+}
+
+/* Layout Section */
+.Introduction {
+    margin-top: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+/* Content Section */
+.content {
+    width: 50%;
+    text-align: left; 
+    color: #0c0c0c;
+    margin-bottom: 20px;
+}
+
+.content h4 {
+    color: #0f0f0f;
+    margin: 0;
+}
+
+.content h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color:#070707;
+    margin: 0;
+}
+
+.content h3{
+    border-bottom: none;
+    margin: 0;
+}
+
+.content1 {
+    margin-top: 20px;
+}
+
+.content p {
+    color: #0a0a0a;
+    margin: 0;
+}
+
+.service {
+    display: flex;           
+    align-items: flex-start; 
+    gap: 15px;              
+    margin-bottom: 20px;     
+}
+
+.service img {
+    width: 75px;            
+    height: auto;          
+    flex-shrink: 0;  
+    float: left;
+    margin-right: 10px;      
+}
+
+.content1 img h4 {
+    text-decoration: underline;
+}
+
+
+/* Image Section */
+.image-section {
+    position: relative;
+    width: 30%;
+}
+
+.image-section img {
+    height: 90%;
+    max-height: 800px;
+    width: 90%;
+    border-radius: 30px;
+}
+
+.image {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* <ul class="features"> Features List */
+.features {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: flex-start; 
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.features li img {
+    width: 20px;
+    margin-right: 10px;
+    flex-shrink: 0; 
+}
+
+.features li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.features li strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+/* <article id="description"> */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center; 
+    gap: 50px; 
+}
+
+article h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+article .steps .step {
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ffffff, #D3D3D3, #ffffff);
+    animation: waveBackground 2s infinite ease-in-out;
+    background-size: 300% 300%;
+    transition: transform 0.25s ease-in-out;
+    width: 480px;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #00000026;
+}
+
+article .steps .step:hover {
+    transform: translateY(-8px);
+}
+
+article .step img {
+    width: 50px;
+}
+
+article .step h2 {
+    margin-top: 20px;
+    font-size: 28px;
+    color:#000000;
+    padding: 0;
+}
+
+.step p {
+    font-size: 16px;
+    color: #000000;
+}
+
+
+/*<div id="Job-positions">*/
+#Job-positions {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* <div class="available-jobs"> */
+.available-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 50px; 
+    padding: 20px;
+}
+
+/* ---job card--- */
+.job-card {
+    overflow: hidden;
+    background: linear-gradient(-45deg, #808080, #000000);
+    animation: waveBackground 2s infinite ease-in-out;
+    background-size: 200% 200%;
+    transition: transform 0.25s ease-in-out;
+    padding: 20px 0 20px 0;
+    box-shadow: 0 0 10px #0f0f0f;
+    width: 330px;
+    border-radius: 10px;
+}
+
+.job-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.job-info {
+    padding: 0 0 0 30px;
+    text-align: left;
+}
+
+.job-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f7f6f6;
+}
+
+.job-info p {
+    font-size: 14px;
+    color: #faf7f7;
+    margin-bottom: 10px;
+}
+
+.job-info h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #faf7f7;
+    padding:0;
+    border-bottom: none;
+}
+
+.job-info ol, .job-info ul {
+    padding-left: 20px;
+    font-size: 14px;
+    color:#cec5c5
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.available-jobs a {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 35%;
+    height: 42px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+    animation: zoomText 1.75s ease-in-out infinite;
+}
+
+.available-jobs a:hover{
+    animation: none;
+    color:#ff0000;
+    box-shadow: 0 0 15px #FF0000;
+}
+
+
+/* ============================ */
+/* ==== Body of apply page ==== */
+.apply-page {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 0.3%;
+    gap: 40px;
+    flex: 1;
+    margin-bottom: 3%;
+}
+
+/* ==== Intro Styling ==== */
+.intro{
+    display: block;
+    margin-top: 72px;
+    color: #FF0000;
+}
+
+.intro h1{
+    margin: 0;
+    padding: 20px 0 10px 0;
+    animation: zoomText 1.75s ease-in-out infinite;;
+}
+
+/* ==== Left Content Styling ==== */
+.left-content {
+    width: 49%;
+    background: #FFFFFF;
+    border-left: 5px solid #d9534f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0000001A;
+}
+
+.left-content h2 {
+    color: #333;
+    border-bottom: 2px solid #FF0000;
+    display: inline-block;
+}
+
+.left-content p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* ==== Right Form Styling ==== */
+.right-form {
+    width: 49%;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #00000033;
+}
+
+/* ==== Labels & Inputs ==== */
+.apply-page label, .apply-page .skill{
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;    
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 6px 6px 6px 0;
+}
+
+.gender label, .skill label{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 5px;
+    font-weight: normal;
+    font-size: 0.7rem;
+}
+
+.gender input, .skill input{
+    margin: 0 3px 0 0;
+}
+
+.apply-page input, .apply-page select, textarea{
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #FF0000;
+    outline: none;
+}
+
+/* ==== Submit Button ==== */
+.applybtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.applybtn button {
+    margin-top: 2%;
+    width: 22%;
+    background: linear-gradient(90deg, #FF7F7F, #FF0000, #FF7F7F);
+    background-size: 300% 300%;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    animation: waveBackground 3s infinite ease-in-out, zoomText 1.75s ease-in-out infinite;
+}
+
+.applybtn button:hover {
+    background: linear-gradient(90deg, #8B0000, #FF0000);
+    box-shadow: 0 0 15px #FF0000B3;
+    animation: none;
+}
+
+.applybtn button:active {
+    transform: scale(0.9);
+}
+
+
+/* ============================ */
+/* ==== Body of About Page ==== */
+.about-page {
+    width: 100%;
+    margin: 72px auto 0 auto;
+    padding-top: 110px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px #0000001A;
+    text-align: center;
+}
+
+.about-page h2, h3{
+    border-bottom: 2px solid #FF0000;
+    margin: 0 0 20px 0 ;
+    display: inline-block;
+}
+
+.about-page h3{
+    border-bottom: 2px solid #FF0000;
+    margin: 0 0 10px 0 ;
+    display: inline-block;
+}
+
+/* ==== Group Info ==== */
+.groupp-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+    color: #FFFFFF;
+    text-align: center;
+}
+.stats-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.stat-item {
+    flex: 1 1 30%;
+    margin: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.about-page dl, .about-page dt, .about-page dd {
+    margin: 0;
+    padding: 0;
+}
+
+.image-item {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.image-item img {
+    width: 15%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-item img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 10px 20px #0000004D;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-text {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.orange { 
+    color: #ff6600; 
+    animation: zoomText 1.75s ease-in-out infinite;
+}
+
+.blue { 
+    color: #00aaff;
+    animation: zoomText 1.75s ease-in-out infinite;
+}
+
+.green { 
+    color: #66cc66; 
+    animation: zoomText 1.75s ease-in-out infinite;
+}
+
+@keyframes zoomText {
+    0% { 
+        transform: scale(1); 
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
+    } 
+    50% { 
+        transform: scale(1.07);
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    } 
+    100% { 
+        transform: scale(1);
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+}
+
+
+/* ==== Group photo ==== */
+.group-photo {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.group-photo h2{
+    width: 100%;
+    display: inline-block;
+}
+
+.card {
+    background: linear-gradient(-45deg, #EEEEEE, #BBBBBB, #EEEEEE);
+    background-size: 300% 300%;
+    animation: waveBackground 2.6s infinite ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000026;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+@keyframes waveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+    border-bottom: none;
+}
+
+.card p {
+    font-size: 0.9rem;
+    padding: 0 10px 15px;
+    color: #666;
+}
+
+/* ==== Table Styling ==== */
+.timetable div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timetable table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #0000001A;
+}
+
+.timetable tr:hover{
+    background-color: #CCCCCC;
+    transition: background-color 0.3s ease;
+}
+
+.timetable th {
+    background: linear-gradient(-45deg, #AAAAAA, #777777, #AAAAAA);
+    background-size: 300% 300%;
+    animation: waveBackground 3s infinite ease-in-out;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.timetable td {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+/* ==== Extra Info Styling ==== */
+.extra-info div{
+    display: flex;
+    justify-content: center;
+}
+.extra-info ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.extra-info li {
+    margin: 10px 0;
+}
+
+/* ==== Contact Section ==== */
+.contact {
+    margin-top: 20px;
+}
+
+.contact p{
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.contact a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* ============================ */
+/* ==== Body of Enhancements Page ==== */
+.enhancements-container {
+    margin: 92px 0 20px 0;
+    width: 80%;
+    padding: 10px;
+    display: block;
+    background-color: #FFFFFF;
+    border: 10px solid transparent;
+    border-radius: 15px;
+}
+
+/* Description list */
+.enhancements-container dl {
+    margin: 20px;
+}
+
+/* Enhancement title */
+.enhancements-container dt {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+/* Links in dt */
+.enhancements-container dt a {
+    font-size: 1rem;
+    color: #FF0000;
+    text-decoration: none;
+    margin-left: 10px;
+
+}
+
+.enhancements-container dt a:hover {
+    text-decoration: underline;
+}
+
+/* Description styling */
+.enhancements-container dd {
+    margin: 10px 0;
+}
+
+/* Code block formatting */
+.enhancements-container .css-code {
+    display: block;
+    background-color: #eee;
+    padding: 10px 0;
+    font-size: 1rem;
+    border-left: 5px solid #ff4b2b;
+    font-family: "Courier New", monospace;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: auto;
+    border-radius: 5px;
+    height: 200px;
+}
+
+/* ============================ */
+/* ==== Footer ==== */
+footer {
+    width: 100%;
+    background-color: #222;
+    color: #FFFFFF;
+    padding: 40px 0 10px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #808080;
+}
+
+.footer-column {
+    width: 30%;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FF0000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #FF0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.0rem;
+    color: #808080;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 1350px) {
+    /* == Responsive body of Home page == */
+    #banner{
+        margin-top: 72px;
+    }
+
+    #banner .box-left h2 {
+        font-size: 4rem;
+        margin-top: 50px;
+    }
+
+    #banner .box-right img {
+        width: 400px;
+        margin: 0px 10px;
+        animation: moveY 3sease-in-out infinite;
+    }
+
+    .taskbar section{
+        gap: 160px;
+    }
+
+    /* == Responsive body of Jobs page == */
+    article .steps .step {
+        width: 330px;
+    }
+
+    .job-card {
+        width: 265px;
+    }
+
+    .job-info h3 {
+        font-size: 11px;
+    }
+
+    .job-info p {
+        font-size: 11px;
+    }
+
+    .job-info ol, .job-info ul {
+        padding-left: 20px;
+        font-size: 11px;
+    }
+
+    .available-jobs a {
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    /* == Responsive body of About Page == */
+    .card {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 7px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        font-size: 0.9rem;
+        margin: 3px 0;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+        padding: 0;
+        color: #666;
+    }
+}
+
+@media (max-width: 1230px) {
+    /* == Responsive header == */
+    .logo {
+        height: 25px; 
+        width: 60px;
+        margin-left: 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+        padding: 10px 10px;
+    }
+
+    /* == Responsive body of Home page == */
+    #banner .box-right {
+        padding-left: 11%;
+    }
+
+    #banner .box-left h2 {
+        font-size: 3rem;
+        margin-top: 85px;
+    }
+
+    #banner .box-right img {
+        width: 270px;
+        margin: 0px 10px;
+        animation: moveY 3sease-in-out infinite;
+    }
+
+    .taskbar section{
+        gap: 150px;
+    }
+
+    #banner .box-left p {
+        font-size: 1.1rem;
+        width: 400px;
+    }
+
+    #banner .box-left a {
+        font-size: 0.65rem;
+        height: 35px;
+    }
+
+    .taskbar section {
+        gap: 80px;
+    }
+
+    nav img {
+        width: 200px;
+    }
+
+    .features li {
+        font-size: 0.65rem;
+    }
+
+    nav h3 {
+        font-size: 1rem;
+    }
+
+    nav p {
+        padding-top: 0.7%;
+        font-size: 0.7rem;
+        line-height: 1.1;
+    }
+
+    /* == Responsive body of Jobs Page == */
+    .image-section img {
+        height: 90%;
+        max-height: 800px;
+        width: 315px;
+        border-radius: 30px;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content h3 {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 0.7rem;
+    }
+
+    .content h4 {
+        font-size: 0.9rem;
+    }
+
+    .features li div {
+        font-size: 0.8rem;
+    }
+
+    .features li div strong{
+        font-size: 0.9rem;
+    }
+
+    article h2 {
+        font-size: 27px;
+    }
+    
+    /* == Responsive body of Apply Page == */
+    .intro h1 {
+        margin: 0;
+        padding: 4px 0 8px 0;
+    }
+
+    .left-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .left-content p {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+
+    /* == Responsive body of about page == */
+    .about-page {
+        margin: 52px auto 0 auto;
+    }
+
+    /* == Responsive Footer == */
+    .footer-container {
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .footer-column {
+        padding: 8px;
+        width: 200px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-column p, .footer-column ul {
+        font-size: 0.8rem;
+        line-height: 1;
+        width: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    /* == Responsive header == */
+    .navbar {
+        height: 25px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    /* == Responsive body of Home page == */
+    #banner .box-left h2 {
+        font-size: 2rem;
+        margin-top: 42px;
+    }
+
+    #banner .box-right img {
+        width: 200px;
+        margin: 0px 10px;
+        animation: moveY 3sease-in-out infinite;
+    }
+
+    .taskbar section{
+        gap: 150px;
+    }
+
+    #banner .box-left p {
+        width: 250px;
+        font-size: 0.82rem;
+    }
+
+    #banner .box-left a {
+        width: 70px;
+        font-size: 0.5rem;
+        height: 25px;
+    }
+
+    .taskbar section {
+        gap: 50px;
+    }
+
+    .taskbar .stat h2 {
+        font-size: 1rem;
+    }
+
+    .taskbar .stat p {
+        font-size: 0.7rem;
+    }
+
+    nav img {
+        width: 150px;
+    }
+
+    .features li {
+        font-size: 0.5rem;
+    }
+
+    nav h3 {
+        font-size: 0.7rem;
+    }
+
+    nav p {
+        width: 230px;
+        padding-top: 0.7%;
+        font-size: 0.5rem;
+        line-height: 1.1;
+    }
+
+    /* == Responsive body of Jobs Page == */
+    .image-section img {
+        height: 500px;
+        width: 250px;
+        border-radius: 30px;
+    }
+
+    .content h2 {
+        font-size: 1rem;
+    }
+
+    .content h3 {
+        font-size: 0.82rem;
+    }
+
+    .content p {
+        font-size: 0.6rem;
+    }
+
+    .content h4 {
+        font-size: 0.8rem;
+    }
+
+    .service img {
+        width: 40px;
+        height: auto;
+        flex-shrink: 0;
+        float: left;
+        margin-right: 7px;
+    }
+
+    .features li div {
+        font-size: 0.6rem;
+    }
+
+    .features li div strong{
+        font-size: 0.8rem;
+    }
+
+    article h2 {
+        font-size: 23px;
+    }
+
+    article .steps .step {
+        width: 220px;
+    }
+
+    article .step h2 {
+        margin: 10px 0 10px 0;
+        font-size: 22px;
+    }
+
+    .step p {
+        font-size: 13px;
+        color: #000000;
+    }
+
+    #Job-positions h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .job-card {
+        width: 220px;
+        padding: 10px 0;
+    }
+
+    .job-info h2 {
+        font-size: 15px;
+    }
+
+    .job-info h3 {
+        font-size: 10px;
+    }
+
+    .job-info p {
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+
+    .job-info {
+        padding: 0 0 0 20px;
+        text-align: left;
+    }
+
+    .job-info ol, .job-info ul {
+        margin: 0 0 5px 0;
+        padding-left: 15px;
+        font-size: 9px;
+    }
+
+    .available-jobs a {
+        width: 30%;
+        height: 27px;
+        font-size: 0.6rem;
+    }
+    
+    /* == Responsive body of Apply Page == */
+    .left-content {
+        padding: 15px;
+    }
+
+    .right-form {
+        padding: 15px 20px 15px 15px;
+    }
+
+    .left-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .left-content p {
+        font-size: 0.75rem;
+        margin: 10px 0;
+    }
+
+    .apply-page button {
+        margin-top: 2%;
+        padding: 7px;
+        font-size: 0.9rem;
+    }
+
+    /* == Responsive body of about page == */
+    .stat-number {
+        font-size: 1rem;
+        font-weight: bold;
+        display: block;
+    }
+
+    .stat-text {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .about-page h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    .image-item img {
+        border-radius: 10px;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .card img {
+        width: 90px;
+        height: 90px;
+        border-radius: 7px;
+    }
+
+    .card h3 {
+        margin: 4px 0;
+        font-size: 0.75rem;
+    }
+
+    .card p {
+        font-size: 0.6rem;
+        padding: 5px 10px;
+    }
+
+    .about-page h2, .about-page h3 {
+        margin-block-start: 0.3rem;
+        margin-block-end: 0.3rem;
+    }
+
+    /* == Responsive body of Enhancements Page == */
+    .enhancements-container dt {
+        font-size: 1rem;
+    }
+
+    .enhancements-container dt a {
+        font-size: 0.9rem;
+    }
+
+    .enhancements-container .css-code {
+        font-size: 0.8rem;
+    }
+
+    /* == Responsive Footer == */
+    .footer-container {
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .footer-column {
+        padding: 8px;
+        width: 150px;
+    }
+
+    .footer-column h3 {
+        font-size: 1rem;
+    }
+
+    .footer-column p, .footer-column ul {
+        font-size: 0.68rem;
+        line-height: 1;
+        width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* == Responsive header == */
+    .navbar ul li a {
+        font-size: 0.9rem;
+        padding: 8.5px 5px;
+    }
+
+    /* == Responsive body of Home page == */
+    #banner .box-left h2 {
+        font-size: 1.7rem;
+        margin-top: 35px;
+    }
+
+    #banner .box-right img {
+        width: 170px;
+        margin: 0px 10px;
+        animation: moveY 3sease-in-out infinite;
+    }
+
+    #banner .box-left p {
+        width: 250px;
+        font-size: 0.8rem;
+    }
+
+    #banner .box-left a {
+        width: 60px;
+        font-size: 0.47rem;
+        height: 25px;
+    }
+
+    .taskbar section {
+        gap: 50px;
+    }
+
+    .taskbar .stat h2 {
+        font-size: 0.8rem;
+    }
+
+    .taskbar .stat p {
+        font-size: 0.6rem;
+    }
+
+    nav img {
+        width: 130px;
+    }
+
+    .features li {
+        font-size: 0.47rem;
+    }
+
+    nav h3 {
+        font-size: 0.6rem;
+    }
+
+    nav p {
+        width: 200px;
+        padding-top: 0.7%;
+        font-size: 0.45rem;
+        line-height: 1.1;
+    }
+
+    /* == Responsive body of Jobs Page == */
+    .Introduction {
+        margin-top: 92px;
+        gap: 90px;
+    }
+
+    .image-section img {
+        height: 370px;
+        width: 180px;
+        border-radius: 10px;
+        padding-left: 5px;
+    }
+
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .content h2 {
+        font-size: 0.7rem;
+        margin-bottom: 9px;
+    }
+
+    .content h3 {
+        font-size: 0.62rem;
+    }
+
+    .content p {
+        font-size: 0.5rem;
+    }
+
+    .content h4 {
+        font-size: 0.5rem;
+    }
+
+    .service img {
+        width: 25px;
+        height: auto;
+        flex-shrink: 0;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .features li img {
+        width: 15px;
+        margin-right: 3px;
+        flex-shrink: 0;
+    }
+
+    .features li div {
+        font-size: 0.5rem;
+    }
+
+    .features li div strong{
+        font-size: 0.6rem;
+    }
+
+    article h2 {
+        font-size: 17px;
+    }
+
+    .steps {
+        gap: 20px;
+    }
+
+    article .steps .step {
+        width: 120px;
+    }
+
+    article .step img {
+        width: 40px;
+    }
+
+    article .step h2 {
+        margin: 5px 0 5px 0;
+        font-size: 13px;
+    }
+
+    .step p {
+        font-size: 9px;
+        color: #000000;
+    }
+
+    #Job-positions {
+        padding-top: 50px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #Job-positions h2{
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .available-jobs {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .job-card {
+        width: 152px;
+        padding: 5px 0;
+    }
+
+    .job-info h2 {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .job-info h3 {
+        font-size: 8px;
+    }
+
+    .job-info p {
+        font-size: 6.8px;
+        margin-bottom: 3px;
+    }
+
+    .job-info {
+        padding: 0 0 0 10px;
+        text-align: left;
+    }
+
+    .job-info ol, .job-info ul {
+        margin: 0 0 5px 0;
+        padding-left: 9px;
+        font-size: 6.7px;
+    }
+
+    .available-jobs a {
+        width: 25%;
+        height: 16px;
+        font-size: 0.41rem;
+        border-radius: 5px;
+    }
+
+    /* == Responsive body of Apply Page == */
+    .intro h1 {
+        font-size: 1.5rem;
+        padding: 0 0 5px 0;
+    }
+
+    .left-content {
+        padding: 10px;
+    }
+
+    .right-form {
+        padding: 10px 15px 10px 10px;
+    }
+
+    .left-content h2 {
+        font-size: 0.95rem;
+    }
+
+    .left-content p {
+        font-size: 0.6rem;
+        margin: 10px 0;
+    }
+
+    .apply-page label, .apply-page .skill{
+        font-size: 0.7rem;
+    }
+
+    .apply-page button {
+        margin-top: 2%;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* == Responsive body of About Page == */
+    .about-page th, td {
+        font-size: 0.7rem;
+        padding: 6px;
+    }
+
+    .extra-info li {
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .image-item img {
+        border-radius: 8px;
+    }
+
+    /* == Responsive body of Enhancements Page == */
+    .enhancements-container dt {
+        font-size: 0.85rem;
+    }
+
+    .enhancements-container dt a {
+        font-size: 0.75rem;
+    }
+
+    .enhancements-container .css-code {
+        font-size: 0.65rem;
+    }
+
+    /* == Responsive Footer == */
+    .footer-container {
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .footer-column {
+        padding: 8px;
+        width: 100px;
+    }
+
+    .footer-column h3 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column p, .footer-column ul {
+        font-size: 0.65rem;
+        line-height: 1;
+        width: 100px;
+    }
+}
+
+@media (max-width: 530px) {
+    /* == Responsive header == */
+    .navbar ul li a {
+        font-size: 0.6rem;
+        padding: 7px 5px;
+    }
+
+    /* == Responsive body of Home page == */
+    #banner .box-left h2 {
+        font-size: 1.1rem;
+        margin-top: 8px;
+    }
+
+    #banner .box-right {
+        padding-left: 15px;
+    }
+
+    #banner .box-right img {
+        width: 120px;
+        margin: 0px 15px;
+        animation: moveY 3sease-in-out infinite;
+    }
+
+    #banner .box-left p {
+        width: 200px;
+        font-size: 0.6rem;
+    }
+
+    #banner .box-left a {
+        width: 55px;
+        font-size: 0.4rem;
+        height: 18px;
+    }
+
+    .taskbar section {
+        gap: 40px;
+    }
+
+    .taskbar .stat h2 {
+        font-size: 0.6rem;
+    }
+
+    .taskbar .stat p {
+        font-size: 0.4rem;
+    }
+
+    .list{
+        margin: 0;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    .features li {
+        font-size: 0.32rem;
+    }
+
+    .features li div {
+        font-size: 0.36rem;
+    }
+
+    .features li div strong {
+        font-size: 0.45rem;
+    }
+
+    .home-divL{
+        padding-left: 15px;
+    }
+
+    nav h3 {
+        width: 150px;
+        font-size: 0.45rem;
+    }
+
+    nav p {
+        width: 150px;
+        padding-top: 0.7%;
+        font-size: 0.36rem;
+        line-height: 1.1;
+    }
+
+    /* == Responsive body of apply page == */
+    .left-content {
+        padding: 5px;
+    }
+
+    .right-form {
+        padding: 5px 15px 5px 10px;
+    }
+
+    .left-content h2 {
+        font-size: 0.75rem;
+    }
+
+    .left-content p {
+        font-size: 0.53rem;
+        margin: 5px 0;
+    }
+
+    .apply-page {
+        gap: 25px;
+    }
+
+    .apply-page label, .apply-page .skill{
+        font-size: 0.7rem;
+    }
+
+    .apply-page select{
+        font-size: 0.8rem;
+    }
+
+    .apply-page input, .apply-page select, textarea {
+        padding: 1px;
+    }
+
+    .gender label, .skill label{
+        padding: 0 5px;
+        font-size: 0.65rem;
+    }
+
+    .gender input, .skill input{
+        width: 8px;
+        height: 8px;
+    }
+
+    .apply-page button {
+        width: 40%;
+        margin-top: 2%;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* == Responsive body of about page == */
+    .stat-number {
+        font-size: 0.75rem;
+        font-weight: bold;
+        display: block;
+    }
+
+    .stat-text {
+        font-size: 0.45rem;
+        text-align: center;
+    }
+
+    .about-page h2, h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .image-item img {
+        border-radius: 5px;
+    }
+
+    .card {
+        width: 110px;
+    }
+
+    .card img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .card h3 {
+        margin: 2px 0;
+        font-size: 0.6rem;
+    }
+
+    .card p {
+        font-size: 0.55rem;
+        padding: 3px 5px;
+    }
+
+    .extra-info li {
+        font-size: 0.7rem;
+        margin: 8px 0;
+    }
+
+    /* == Responsive body of Enhancements Page == */
+    .enhancements-container {
+        margin: 75px 0 20px 0;
+        padding: 0px;
+        border-radius: 10px;
+    }
+
+    .enhancements-container dt {
+        font-size: 0.8rem;
+    }
+
+    .enhancements-container dt a {
+        font-size: 0.7rem;
+    }
+
+    .enhancements-container dd p {
+        font-size: 0.67rem;
+    }
+
+    .enhancements-container .css-code {
+        font-size: 0.7rem;
+    }
+
+
+    /* == Responsive Footer == */
+    .footer-container {
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .footer-column {
+        padding: 8px;
+        width: 90px;
+    }
+
+    .footer-column h3 {
+        font-size: 0.9rem;
+    }
+
+    .footer-column p, .footer-column ul {
+        font-size: 0.65rem;
+        line-height: 1;
+        width: 90px;
+    }
+}
